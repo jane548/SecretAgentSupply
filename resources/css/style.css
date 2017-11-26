@@ -7,8 +7,8 @@ html, body {
   max-width: 960px;
   margin: 0 auto;
 }
-/*-------------- Header Styles --------------*/
 
+/*-------------- Header Styles --------------*/
 header {
   background-color: black;
   color: white;
@@ -33,7 +33,6 @@ header .container {
 }
 
 /*------------- Main Banner Styles ---------------*/
-
 .banner {
   background-image: url(../images/moto.jpeg);
   background-repeat: no-repeat;
@@ -64,7 +63,6 @@ header .container {
 }
 
 /*------------- Navigation Styles -------------*/
-
 nav {
   background-color: firebrick;
   text-align: center;
@@ -79,8 +77,11 @@ nav ul {
   padding: 0.75rem 0;
 }
 
-/*----------- Product Styles --------------*/
+.mobile-nav {
+  display: none;
+}
 
+/*----------- Product Styles --------------*/
 .products {
   display: flex;
   justify-content: space-between;
@@ -115,7 +116,6 @@ nav ul {
 }
 
 /*---------- Info Styles ----------*/
-
 .info {
   display: flex;
   justify-content: space-between;
@@ -133,7 +133,6 @@ nav ul {
 }
 
 /*--------- Footer Styles ----------*/
-
 footer {
   background-color: black;
   color: white;
@@ -142,4 +141,80 @@ footer {
 
 footer .container {
   padding: 2.25rem 0;
+}
+
+/*-------- Tablet Media Query ------*/
+@media only screen and (max-width: 1024px) {
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav #full {
+    display: none;
+  }
+
+  #watch {
+    display: none;
+  }
+
+  .item {
+    width: 47%;
+  }
+}
+
+/*------- Cell Phone Media Query ------*/
+@media only screen and (max-width: 470px) {
+  .banner {
+    height: 15rem;
+  }
+
+  .banner-text {
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 100%;
+    top: 10rem;
+  }
+
+  .banner-text h4 {
+    font-size: 0.77rem;
+    font-weight: bold;
+    padding: 1rem 0 0.25rem 2rem;
+  }
+
+  .banner-text h2 {
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .products {
+    justify-content: center;
+  }
+
+  .item {
+    width: 90%;
+  }
+
+  #glasses, #watch {
+    display: none;
+  }
+
+  .info {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
